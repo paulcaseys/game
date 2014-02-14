@@ -1,7 +1,9 @@
-Zurb Foundation and Backbone.js boilerplate
+The Positive Game
 ==================================================
 
-Using common PureMVC and Gaia framework conventions. A good starting point for backbone.js projects.
+A game to encourage a healthy fun/fitness/mind balance.
+
+Built using common PureMVC and Gaia framework conventions. A good starting point for backbone.js projects.
 
 * Most of the functionality is in `resources/js/app`
 * Third-party libraries are in `resources/js/libs`
