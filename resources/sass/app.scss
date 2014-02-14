@@ -79,6 +79,8 @@
 
 
 $color-offwhite: #eee; 
+$color-plus: #334; 
+$color-minus: #334; 
 
 
 html,
@@ -132,18 +134,22 @@ body {
 .button-group.right { width: 200px; text-align:right;}
 .button.active {background-color: #333;}
 
+// plus minus buttons
+#home-page .minus-button { border-radius: 50%; cursor: pointer; font-size: emCalc(30px); text-align: center; line-height: 55px; position: fixed; z-index: 30000; background-color: $color-minus; color: #fff; bottom: 0px; left: 0px; width: 55px; height: 55px; }
+#home-page .plus-button { border-radius: 50%; cursor: pointer; font-size: emCalc(30px); text-align: center; line-height: 55px; position: fixed; z-index: 30000; background-color: $color-plus; color: #fff; bottom: 0px; right: 0px; width: 55px; height: 55px; }
 
 // home page
 #home-page .top-area {height:180px; text-align: center; background-color: $color-offwhite; position: relative;}
 #home-page .amount {font-size: emCalc(46px); position: absolute; width: 100%; top: 80px; font-weight: 900; } 
 #home-page .period {font-size: emCalc(12px); position: absolute; width: 100%; top: 135px; text-transform:uppercase; } 
 
-#home-page .bottom-area {background-color: #0f0; position: relative; width: 100%;}
-#home-page .bottom-area .content { text-align: center; color: #f0f; display: block; width: 100%; }
 
-#home-page .bottom-area .content .left {width: 50%; float: left; display: table; text-align: right;}
+#home-page .bottom-area {background-color: #334; position: relative; width: 100%;}
+#home-page .bottom-area .content { text-align: center; color: #f0f; display: block; width: 100%;  padding-bottom: 10px;}
+
+#home-page .bottom-area .content .left {width: 50%; float: left; display: table; text-align: right; padding-top: 10px;}
 #home-page .bottom-area .content .left .circle {
-    background: #f00;
+    background:  $color-offwhite;
     width: 100px;
     height: 100px;
     margin-right: -50px;
@@ -151,16 +157,20 @@ body {
     float: right;
 }
 #home-page .bottom-area .content .left .caption {
+  color: #fff;
   height: 100%;
   width: 100%;
   text-align: right;
-  background-color: #ff0;
   vertical-align: middle;
   display: table-cell;
+  font-size: emCalc(12px); 
+  text-transform:uppercase;  
+  padding-right: 10px;
+  line-height: 14px;
 }
-#home-page .bottom-area .content .right {width: 50%; float: right; display: table;}
+#home-page .bottom-area .content .right {width: 50%; float: right; display: table; padding-top: 10px;}
 #home-page .bottom-area .content .right .circle {
-    background: #f00;
+    background: $color-offwhite;
     width: 100px;
     height: 100px;
     margin-left: -50px;
@@ -168,15 +178,25 @@ body {
     float: left;
 }
 #home-page .bottom-area .content .right .caption {
+  color: #fff;
   height: 100%;
   width: 100%;
   text-align: left;
-  background-color: #ff0;
   vertical-align: middle;
   display: table-cell;
+  font-size: emCalc(12px); 
+  text-transform:uppercase; 
+  padding-left: 10px;
+  line-height: 14px;
+}
+#home-page .bottom-area .content .amount {
+  font-size: emCalc(14px); 
+  height: 10px;
+  background-color: #f00;
+  display: inline;
 }
 
-.clear:after {
+#home-page .bottom-area .clear:after {
     content:'';
     display:block;
     clear: both;
@@ -198,7 +218,7 @@ body {
 
 
 // footer
-#credits {  margin: 30px auto;  color: #999;    text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;  text-align: center;}
+#credits {  font-size: emCalc(11px); margin: 30px auto;  color: #999;  text-align: center;}
 
 
 // overriding default values
