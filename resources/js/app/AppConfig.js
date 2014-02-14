@@ -89,6 +89,7 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
             // foundation
             'foundation':           'resources/js/libs/foundation',
             'foundationtopbar':     'resources/js/libs/foundation/jquery.foundation.topbar',
+            'foundationbuttons':    'resources/js/libs/foundation/jquery.foundation.buttons',
             'foundationapp':        'resources/js/libs/foundation/app',
 
             // foundation
@@ -174,6 +175,10 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
                 deps: ["jquery"],
                 exports: "foundationtopbar"
             },
+            'foundationtopbuttons': {
+                deps: ["jquery"],
+                exports: "foundationtopbuttons"
+            },
             'foundationapp': {
                 deps: ["jquery", "foundationtopbar"],
                 exports: "foundationapp"
@@ -231,6 +236,10 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
         'cosmosdata',
 
         // foundation
+        'foundationapp',
+        'foundationbuttons',
+
+        // foundation
         'tweenlite',
         'easepack',
         'cssplugin',
@@ -286,6 +295,7 @@ App.Data.GalleryData = 'resources/data/GalleryData.json' + '?ver=' + ((new Date(
             // the startmodule is defined on the same script tag of data-main.
             // example: <script data-main="main.js" data-start="pagemodule/main" src="vendor/require.js"/>
             startModuleName = $("script[data-main][data-start]").attr("data-start");
+
 
             if (startModuleName) {
                 require([startModuleName], function (startModule) {

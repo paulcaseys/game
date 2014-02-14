@@ -46,8 +46,16 @@
 
 @import "font-awesome/font-awesome";
 
+@import "foundation/foundation-global";
+@import "foundation/components/global";
+@import "foundation/components/dropdown";
 
 @import "compass/css3/border-radius";
+
+@import "compass/css3/box-shadow";
+@import "compass/css3/text-shadow";
+//@import "compass";
+//@import "compass/css3/gradient";
 
 
 
@@ -81,6 +89,7 @@
 $color-offwhite: #eee; 
 $color-plus: #334; 
 $color-minus: #334; 
+$color-panel: #ddd; 
 
 
 html,
@@ -135,13 +144,13 @@ body {
 .button.active {background-color: #333;}
 
 // plus minus buttons
-#home-page .minus-button { border-radius: 50%; cursor: pointer; font-size: emCalc(30px); text-align: center; line-height: 55px; position: fixed; z-index: 30000; background-color: $color-minus; color: #fff; bottom: 0px; left: 0px; width: 55px; height: 55px; }
-#home-page .plus-button { border-radius: 50%; cursor: pointer; font-size: emCalc(30px); text-align: center; line-height: 55px; position: fixed; z-index: 30000; background-color: $color-plus; color: #fff; bottom: 0px; right: 0px; width: 55px; height: 55px; }
+#home-page .minus-button { border-radius: 50%; cursor: pointer; font-size: emCalc(30px); text-align: center; line-height: 35px; position: fixed; z-index: 30000; background-color: $color-offwhite; color: $color-minus; top: 90px; left: 5px; width: 35px; height: 35px; }
+#home-page .plus-button { border-radius: 50%; cursor: pointer; font-size: emCalc(30px); text-align: center; line-height: 35px; position: fixed; z-index: 30000; background-color: $color-offwhite; color: $color-plus; top: 90px; right: 5px; width: 35px; height: 35px; }
 
 // home page
 #home-page .top-area {height:180px; text-align: center; background-color: $color-offwhite; position: relative;}
 #home-page .amount {font-size: emCalc(46px); position: absolute; width: 100%; top: 80px; font-weight: 900; } 
-#home-page .period {font-size: emCalc(12px); position: absolute; width: 100%; top: 135px; text-transform:uppercase; } 
+#home-page .period {font-size: emCalc(12px); position: absolute; width: 100%; top: 130px; text-transform:uppercase; } 
 
 
 #home-page .bottom-area {background-color: #334; position: relative; width: 100%;}
@@ -201,6 +210,53 @@ body {
     display:block;
     clear: both;
 }
+
+
+.panel-plus {
+  padding: 20px;
+  background-color: $color-panel;
+  text-align: center; 
+}
+
+.panel-plus .title { font-size: emCalc(14px); text-transform: uppercase; font-weight: 900; margin-bottom: 20px;} 
+
+
+// forms
+
+input[type=text], input[type=password], textarea {height: 50px; border: 0px solid; font-size: emCalc(16px);  padding:0px; text-align: center; color: #aaa; @include border-radius(5px);   background-color: rgba(6,22,31,.05);  margin-bottom: 20px;}
+input[type=text].error, input[type=password].error, textarea.error {border: 1px solid #ff0; margin-bottom: 10px;}
+textarea {font-size: emCalc(16px);   }
+
+.form.button span { color: #ff5;  @include text-shadow(0 -1px #000); }
+.form.button { font-size: emCalc(22px);   font-weight: bold; margin: 0px 0px 20px 0px; padding: 28px 40px;     width: 100%; text-align: center; @include border-radius(5px);    background-color: #1b3443;  }
+.form.button:hover { background-color: #ff6;   @include box-shadow(0 2px 3px rgba(0,0,0,.41), inset 0 1px rgba(255,255,255,.48)); }
+.form.button:hover span { color: #ff4;  @include text-shadow(0 -0px #000); }
+.form.button.dropdown>ul li a, .button.dropdown>ul li button { font-size: emCalc(16px);   padding: 20px; text-align: center; }
+
+
+
+// placeholder text
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #aaa;
+    font-style: italic;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ddd;
+    font-style: italic;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ddd;
+    font-style: italic;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #ddd;
+    font-style: italic;
+}
+
+
+//select {height: 50px; border: 0px solid; font-size: emCalc(16px);  padding:0px; text-align: center; color: #aaa; @include border-radius(5px);   background-color: rgba(6,22,31,.05);  margin-bottom: 20px;}
+
+
 
 
 // gallery page

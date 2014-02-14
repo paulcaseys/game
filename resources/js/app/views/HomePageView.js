@@ -14,7 +14,10 @@ define([
   // required libraries
   'jquery',
   'underscore',
-  'backbone'
+  'backbone',
+
+  'foundationtopbar',
+  'foundationapp'
 
   // required collections
   //'App.Collections.HelloWorldCollection'
