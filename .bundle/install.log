@@ -1,0 +1,7 @@
+# Logfile created on 2014-02-13 20:52:24 -0500 by logger.rb/44203
+I, [2014-02-13T20:52:24.954649 #37111]  INFO -- : 0:  chunky_png (1.2.6) from /Users/paulcasey/.rvm/gems/ruby-2.1.0/specifications/chunky_png-1.2.6.gemspec
+I, [2014-02-13T20:52:26.899149 #37111]  INFO -- : 0:  fssm (0.2.9) from /Users/paulcasey/.rvm/gems/ruby-2.1.0/specifications/fssm-0.2.9.gemspec
+I, [2014-02-13T20:52:29.448122 #37111]  INFO -- : 0:  sass (3.2.3) from /Users/paulcasey/.rvm/gems/ruby-2.1.0/specifications/sass-3.2.3.gemspec
+I, [2014-02-13T20:52:29.479554 #37111]  INFO -- : 0:  compass (0.12.2) from /Users/paulcasey/.rvm/gems/ruby-2.1.0/specifications/compass-0.12.2.gemspec
+I, [2014-02-13T20:52:32.174908 #37111]  INFO -- : 0:  zurb-foundation (4.0.7) from /Users/paulcasey/.rvm/gems/ruby-2.1.0/specifications/zurb-foundation-4.0.7.gemspec
+I, [2014-02-13T20:52:32.218041 #37111]  INFO -- : 0:  bundler (1.5.1) from /Users/paulcasey/.rvm/gems/ruby-2.1.0@global/specifications/bundler-1.5.1.gemspec
